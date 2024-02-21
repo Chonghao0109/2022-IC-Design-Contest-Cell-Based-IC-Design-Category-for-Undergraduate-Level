@@ -1,0 +1,77 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : JAM
+Version: Q-2019.12
+Date   : Wed Feb 21 00:32:27 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: P_reg[5][0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: READ_DATA_reg[5]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  JAM                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  P_reg[5][0]/CK (DFFSX2)                  0.00       0.50 r
+  P_reg[5][0]/QN (DFFSX2)                  0.61       1.11 r
+  U798/Y (NAND2X2)                         0.19       1.30 f
+  U799/Y (OAI22X2)                         0.35       1.65 r
+  U800/Y (AOI222X2)                        0.28       1.93 f
+  U801/Y (AND2X4)                          0.28       2.22 f
+  U806/Y (AOI221X4)                        0.62       2.83 r
+  U816/Y (INVX6)                           0.17       3.00 f
+  U590/Y (NAND2X1)                         0.30       3.30 r
+  U624/Y (BUFX6)                           0.26       3.57 r
+  U653/Y (OAI22X1)                         0.22       3.79 f
+  U821/Y (NOR4X2)                          0.31       4.10 r
+  U651/Y (BUFX8)                           0.27       4.36 r
+  U588/Y (INVX8)                           0.17       4.53 f
+  U825/Y (OAI22X4)                         0.13       4.66 r
+  U639/Y (OAI21X1)                         0.23       4.89 f
+  U638/Y (OA21X2)                          0.34       5.23 f
+  U830/Y (AOI211X4)                        0.43       5.66 r
+  U607/Y (INVX3)                           0.07       5.73 f
+  U843/Y (AOI31X4)                         0.40       6.12 r
+  U862/Y (NAND2X2)                         0.21       6.33 f
+  U863/Y (OAI22XL)                         0.52       6.85 r
+  U864/Y (AOI211X4)                        0.34       7.19 f
+  U867/Y (OAI21X4)                         0.35       7.54 r
+  U916/Y (AOI222X4)                        0.43       7.97 f
+  U727/Y (AOI222X1)                        0.56       8.53 r
+  U692/Y (AOI21XL)                         0.33       8.86 f
+  U1013/Y (OAI22X2)                        0.38       9.24 r
+  U1014/Y (OAI22X1)                        0.29       9.52 f
+  U1015/Y (AOI221X2)                       0.23       9.75 r
+  U1017/Y (OAI211XL)                       0.25      10.00 f
+  READ_DATA_reg[5]/D (EDFFXL)              0.00      10.00 f
+  data arrival time                                  10.00
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  READ_DATA_reg[5]/CK (EDFFXL)             0.00      10.40 r
+  library setup time                      -0.39      10.01
+  data required time                                 10.01
+  -----------------------------------------------------------
+  data required time                                 10.01
+  data arrival time                                 -10.00
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
